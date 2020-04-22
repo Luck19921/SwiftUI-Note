@@ -16,3 +16,5 @@ This is my note of learning SwiftUI
 ## About Stack()
 ### VStack, HStack or ZStack
 > x, y維度垂直, 水平與z維度完全蓋上主體
+> 可以在Stack內添加init, 像是這樣：VStack(alignment: , spacing: CGFloat) 
+
