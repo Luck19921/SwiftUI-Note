@@ -11,3 +11,8 @@ This is my note of learning SwiftUI
 > 功能展現上貌似與上述kerning相同, 被用於設定字母或字元間的間隔距離
 ### 5.baselineOffset(_ baselineOffset: CGFloat)
 > 將該段文字的位置稍微往上提升, 換句話說就是對文字的基礎位置做變更
+
+
+## About Stack()
+### VStack, HStack or ZStack
+> x, y維度垂直, 水平與z維度完全蓋上主體
