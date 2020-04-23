@@ -3,11 +3,21 @@
   
   ## About Stack()
 ### VStack、HStack、ZStack(三種Stack視圖)
-  > H、V與Z分別代表水平、垂直與立體三維空間(x、y、z三軸)作為視圖, 三種Stack被應用於實現不同視圖佈局需求。此外, 可以在使用各類Stack時, 在後方的()內添加init來初始化一些你想改變或控制的項目, 實際使用方式如下：VStack(alignment: , spacing: CGFloat) , alignment代表著此Stack內的元件的對齊規則(.leading、.center、.trailing), 分別代表著對左靠齊、居中對齊與對右靠齊。spacing則是代表此視圖內物件間的距離, 範例如下：
-    <pre><code>VStack(spacing : 50) {
+  > H、V與Z分別代表水平、垂直與立體三維空間(x、y、z三軸)作為視圖, 三種Stack被應用於實現不同視圖佈局需求。此外, 可以在使用各類Stack時, 在後方的()內添加init來初始化一些你想改變或控制的項目, 實際使用方式如下：VStack(alignment: , spacing: CGFloat) , alignment代表著此Stack內的元件的對齊規則(.leading、.center、.trailing), 分別代表著對左靠齊、居中對齊與對右靠齊。而若是使用HStack則無法使用leading、trailing...等設定, 因為HStack是從左排到右, 則可以使用.top、.bottom、.center、.firstTextBaseline、.lastTextBaseline等等。若是使用ZStack, 則有更多關於對齊的設定可供挑選使用。另外, spacing則是代表此視圖內物件間的距離設定參數, 範例如下：
+    <pre><code>
+    VStack(alignment: .leading, spacing : 50) {
     Text("Item 1")
     Text("Item 2")
-    }</code></pre>
+    }
+    HStack(alignment: .bottom, spacing: 30) {
+    Text("Item 1 Left")
+    Text("Item 2 Right")
+    }
+    ZStack(alignment: .topLeading, spacing: 30) {
+    Text("Item 1 LeftandTop")
+    Text("Item 2 cover on Item1 same position")
+    }
+    </code></pre>
   
 ## About Text()
 ### init(verbatim content: String)
